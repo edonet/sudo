@@ -1,0 +1,66 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+
+
+###########################
+# Adobe CC Start
+# 127.0.0.1 activate.adobe.com
+# 127.0.0.1 practivate.adobe.com
+# 127.0.0.1 ereg.adobe.com
+# 127.0.0.1 activate.wip3.adobe.com
+# 127.0.0.1 wip3.adobe.com
+# 127.0.0.1 3dns-3.adobe.com
+# 127.0.0.1 3dns-2.adobe.com
+# 127.0.0.1 adobe-dns.adobe.com
+# 127.0.0.1 adobe-dns-2.adobe.com
+# 127.0.0.1 adobe-dns-3.adobe.com
+# 127.0.0.1 ereg.wip3.adobe.com
+# 127.0.0.1 activate-sea.adobe.com
+# 127.0.0.1 wwis-dubc1-vip60.adobe.com
+# 127.0.0.1 activate-sjc0.adobe.com
+# 127.0.0.1 lmlicenses.wip4.adobe.com
+# 127.0.0.1 lm.licenses.adobe.com
+# 127.0.0.1 na1r.services.adobe.com
+# 127.0.0.1 hlrcv.stage.adobe.com
+# Adobe CC End
+############################
+
+
+###########################
+# Mysoft Start
+127.0.0.1   api-dev.myysq.com.cn
+127.0.0.1   yd-dev.myysq.com.cn
+127.0.0.1   kefu-dev.myysq.com.cn
+127.0.0.1   qyfw-dev.myysq.com.cn
+127.0.0.1   game-dev.myysq.com.cn
+127.0.0.1   manage-dev.myysq.com.cn
+127.0.0.1   member-dev.myysq.com.cn
+127.0.0.1   yf-dev.myysq.com.cn
+127.0.0.1   appyf-dev.myysq.com.cn
+127.0.0.1   app-dev.myysq.com.cn
+127.0.0.1   passport-dev.myysq.com.cn
+127.0.0.1   property-dev.myysq.com.cn
+127.0.0.1   wx-dev.myysq.com.cn
+127.0.0.1   rental-dev.myysq.com.cn
+127.0.0.1   reportcenter-dev.myysq.com.cn
+127.0.0.1   fw-dev.myysq.com.cn
+127.0.0.1   vyd-dev.myysq.com.cn
+127.0.0.1   vengineer-dev.myysq.com.cn
+127.0.0.1   vgame-dev.myysq.com.cn
+127.0.0.1   vmember-dev.myysq.com.cn
+127.0.0.1   vfw-dev.myysq.com.cn
+127.0.0.1   vshop-dev.myysq.com.cn
+127.0.0.1   msg-dev.myysq.com.cn
+127.0.0.1   info-dev.myysq.com.cn
+127.0.0.1   tenant-dev.myysq.com.cn
+# Mysoft End
+###########################
+
+

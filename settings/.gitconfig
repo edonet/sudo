@@ -1,0 +1,46 @@
+[user]
+    name = edoner
+    email = edonet@163.com
+
+[core]
+    quotepath = false
+
+# [color]
+#     branch = auto
+#     diff = auto
+#     status = auto
+#     grep = auto
+#     ui = auto
+#     interactive = auto
+
+# [color "branch"]
+#     current = yellow reverse
+#     local = yellow
+#     remote = green
+
+[color "diff"]
+#     meta = yellow
+#     frag = magenta
+#     old = red
+    new = yellow
+
+# [color "status"]
+#     added = yellow
+#     changed = green
+#     untracked = cyan
+
+[gui]
+
+    # 代码库统一使用utf-8
+    encoding = utf-8
+
+[i18n]
+
+    # log编码，声明后发到服务器才不会乱码
+    commitencoding = utf-8
+    logoutputencoding = utf-8
+
+[svn]
+
+    # 支持中文路径
+    pathnameencoding = GB2312
