@@ -12,6 +12,7 @@ const
     path = require('path'),
     std = require('../utils/std'),
     link = require('../utils/link'),
+    mkdir = require('../utils/mkdir'),
     dir = (...args) => path.resolve(__dirname, ...args),
     homedir = os.homedir(),
     settings = dir('../settings');
@@ -23,6 +24,9 @@ const
  *************************************************
  */
 async function start() {
+
+    // 创建【.bin】文件夹
+    await mkdir(dir('../.bin'));
 
     /* 添加用户自定义命令 */
     std.log('-', 'User bin', '-');
