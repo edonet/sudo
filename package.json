@@ -8,17 +8,22 @@
     "link": "node ./bin/slink.js"
   },
   "bin": {
+    "sass": "./bin/sass.js",
     "slink": "./bin/slink.js"
   },
   "repository": "git@github.com:edonet/sudo.git",
   "author": "edoner <edonet@163.com>",
   "license": "MIT",
   "dependencies": {
+    "autoprefixer": "^7.1.1",
     "cordova": "^7.0.1",
+    "cssnano": "^3.10.0",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^6.10.3",
     "gulp": "^3.9.1",
     "ios-deploy": "^1.9.1",
+    "node-sass": "^4.5.3",
+    "postcss": "^6.0.1",
     "react-native-cli": "^2.0.1",
     "vue-cli": "^2.8.1",
     "webpack": "^2.5.1",
