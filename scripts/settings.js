@@ -9,7 +9,7 @@
 const
     fs = require('../lib/fs'),
     os = require('../lib/os'),
-    std = require('../lib/stdout'),
+    std = require('../lib/std'),
     dir = os.usedir(__dirname),
     settings = dir('../settings');
 

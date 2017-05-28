@@ -21,6 +21,9 @@ const
  */
 async function start() {
 
+    // 配置调试信息
+    fs.debug({ mkdir: false, rmdir: false });
+
     if (args[0] === '-f') {
 
         // 移除参数
@@ -41,10 +44,11 @@ async function start() {
 
             // 生成软链接
             std.block('Create System Link');
+            await fs.mkdir(dist());
             await Promise.all(files.map(file => fs.symlink(src(file), dist(file))));
 
             // 输出结果信息
-            std.log('Oo, Command has finished!\n');
+            std.log('\nOo, Command has finished!\n');
         }
 
         return true;
@@ -58,7 +62,7 @@ async function start() {
         await fs.symlink(os.cwd(args[0]), os.cwd(args[1]));
 
         // 输出结果信息
-        std.log('Oo, Command has finished!\n');
+        std.log('\nOo, Command has finished!\n');
         return true;
     }
 }

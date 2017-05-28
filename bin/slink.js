@@ -41,7 +41,7 @@ async function start() {
             await Promise.all(Object.keys(cmds).map(key => fs.rmdir(dir(key))));
 
         // 输出结果信息
-        std.log('Oo, Command has finished!\n');
+        std.log('\nOo, Command has finished!\n');
         return true;
     }
 
@@ -55,7 +55,7 @@ async function start() {
         await Promise.all(Object.keys(cmds).map(key => fs.symlink(os.cwd(cmds[key]), dir(key))));
 
     // 输出结果信息
-    std.log('Oo, Command has finished!\n');
+    std.log('\nOo, Command has finished!\n');
     return true;
 }
 
