@@ -9,6 +9,7 @@
   },
   "bin": {
     "sass": "./bin/sass.js",
+    "sln": "./bin/sln.js",
     "slink": "./bin/slink.js"
   },
   "repository": "git@github.com:edonet/sudo.git",

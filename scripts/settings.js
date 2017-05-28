@@ -7,14 +7,10 @@
  *************************************************
  */
 const
-    fs = require('fs'),
-    os = require('os'),
-    path = require('path'),
-    std = require('../utils/std'),
-    link = require('../utils/link'),
-    mkdir = require('../utils/mkdir'),
-    dir = (...args) => path.resolve(__dirname, ...args),
-    homedir = os.homedir(),
+    fs = require('../lib/fs'),
+    os = require('../lib/os'),
+    std = require('../lib/stdout'),
+    dir = os.usedir(__dirname),
     settings = dir('../settings');
 
 
@@ -25,35 +21,41 @@ const
  */
 async function start() {
 
+    // 设置输出日志
+    fs.debug({ rmdir: false });
+
     // 创建【.bin】文件夹
-    await mkdir(dir('../.bin'));
+    await fs.mkdir(dir('../.bin'));
+
 
     /* 添加用户自定义命令 */
-    std.log('-', 'User bin', '-');
-    await link(dir('../.bin'), dir(homedir, '.bin'));
+    std.block('User bin');
+    await fs.symlink(dir('../.bin'), os.homedir('.bin'));
 
 
     /* 添加用户【node】全局模块命令 */
-    std.log('-', 'Node modules', '-');
-    await link(dir('../node_modules/.bin'), dir(homedir, '.node_modules'));
+    std.block('Node modules');
+    await fs.symlink(dir('../node_modules/.bin'), os.homedir('.node_modules'));
 
 
     /* 添加用户自定义配置 */
-    fs.readdir(settings, (err, files) => {
+    let files = await fs.readdir(settings);
 
-        // 抛出错误信息
-        if (err) {
-            throw err;
-        }
+    if (files && files.length) {
 
         // 打印配置信息
-        std.log('-', 'Settings', '-');
+        std.block('Settings');
 
         // 添加配置软链接
-        files.forEach(async file => {
-            await link(dir(settings, file), dir(homedir, file));
-        });
-    });
+        await Promise.all(files.map(file => {
+            return fs.symlink(dir(settings, file), os.homedir(file));
+        }));
+
+        // 输出空行
+        std.log();
+    }
+
+    return true;
 }
 
 

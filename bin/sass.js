@@ -12,8 +12,8 @@ const
     sass = require('node-sass'),
     postcss = require('postcss'),
     postcssOptions = require('../postcss.conf'),
-    std = require('../utils/std'),
-    thunkify = require('../utils/thunkify');
+    std = require('../lib/std'),
+    thunkify = require('../lib/thunkify');
 
 
 /*
@@ -37,12 +37,14 @@ async function start() {
     dist = process.argv[3] || src.replace(/\.scss$/, '.css');
 
     // 打印信息
-    std.log('-', 'Sass and autoprefixer', '-');
+    std.block('Sass and Autoprefixer');
     std.log(`source: ${src}`);
     std.log(`output: ${dist}`);
 
     try {
-        std.silent();
+
+        // 拦截输出
+        std.silent((key, args) => key !== 'log' && std[key](...args));
 
         // 编译【sass】文件
         res = await thunkify(sass.render)({ file: src, outputStyle: 'compressed' });
@@ -53,17 +55,11 @@ async function start() {
         // 写入文件
         await thunkify(fs.writeFile)(dist, res.css);
 
-        // 输出警告信息
-        std.silent(stdout => {
-            stdout.warn.forEach(args => std.warn('warn:', ...args));
-        });
-
         // 编译成功
         std.log(`size: ${res.css.length}`);
-        std.log('sass compiled successfully!');
-        std.log();
+        std.log('sass compiled successfully!\n');
     } catch (err) {
-        return console.error(err), false;
+        return std.error(err), false;
     }
 
     return true;
@@ -76,4 +72,3 @@ async function start() {
  *************************************************
  */
 module.exports = start();
-
