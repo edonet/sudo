@@ -1,2 +1,2 @@
-# sudo
+# osc
 node os command

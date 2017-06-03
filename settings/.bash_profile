@@ -129,6 +129,17 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 ##
 #
 # ————————————————————————————————————————————————————
+# IP Config
+# ————————————————————————————————————————————————————
+# alias for ifconfig | grep
+#
+##
+alias ip='ifconfig | grep inet\\b'
+
+
+##
+#
+# ————————————————————————————————————————————————————
 # 替换【homebrew】默认源
 # ————————————————————————————————————————————————————
 # 参考：https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git

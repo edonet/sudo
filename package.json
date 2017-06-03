@@ -1,5 +1,5 @@
 {
-  "name": "sudo",
+  "name": "osc",
   "version": "1.0.0",
   "description": "node os commands",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "sln": "./bin/sln.js",
     "slink": "./bin/slink.js"
   },
-  "repository": "git@github.com:edonet/sudo.git",
+  "repository": "git@github.com:edonet/osc.git",
   "author": "edoner <edonet@163.com>",
   "license": "MIT",
   "dependencies": {
