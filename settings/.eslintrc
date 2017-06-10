@@ -62,7 +62,9 @@
         "node": true,
         "commonjs": true,
         "amd": true,
-        "worker": true
+        "worker": true,
+        "jest": true,
+        "jest/globals": true
     },
 
     "globals": {
@@ -72,7 +74,8 @@
     },
 
     "plugins": [
-        "react"
+        "react",
+        "jest"
     ],
 
     "settings": {
@@ -175,7 +178,8 @@
 
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:jest/recommended"
     ],
 
     "rules": {
@@ -320,7 +324,12 @@
         // 在 for-in 中使用 hasOwnProperty 过滤
         "guard-for-in": 2,
 
-        /* eslint-plugin-react */
+
+        /*
+         ***********************************************
+         * eslint-plugin-react
+         ***********************************************
+         */
 
         "react/jsx-boolean-value": 2,
         "react/jsx-no-undef": 2,
@@ -336,6 +345,18 @@
         "react/prop-types": 0,
         "react/react-in-jsx-scope": 2,
         "react/self-closing-comp": 2,
-        "react/wrap-multilines": 0
+        "react/wrap-multilines": 0,
+
+
+        /*
+         ***********************************************
+         * eslint-plugin-jest
+         ***********************************************
+         */
+
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/valid-expect": "error"
     }
 }
