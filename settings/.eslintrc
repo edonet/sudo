@@ -63,8 +63,7 @@
         "commonjs": true,
         "amd": true,
         "worker": true,
-        "jest": true,
-        "jest/globals": true
+        "jest": true
     },
 
     "globals": {
