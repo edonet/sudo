@@ -35,7 +35,7 @@ async function start() {
 
     /* 添加用户【node】全局模块命令 */
     std.block('Node modules');
-    await fs.symlink(dir('../node_modules/.bin'), os.homedir('.node_modules'));
+    await fs.symlink(dir('../node_modules'), os.homedir('.node_modules'));
 
 
     /* 添加用户自定义配置 */

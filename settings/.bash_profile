@@ -96,7 +96,7 @@ PROMPT_COMMAND="find_git_branch; $PROMPT_COMMAND"
 #
 ##
 export TERM="xterm-color"
-export PS1="\n\[\033[33m\][\t] \[\033[00m\]\u@\h: \[\033[36m\]\w/ \[\033[35m\]\$GIT_BRANCH\[\033[00m\]\n\$ "
+export PS1="\n\[\033[33m\][\t] \[\033[32m\]\u@\h: \[\033[36m\]\w/ \[\033[35m\]\$GIT_BRANCH\[\033[32m\]\n\$ "
 
 
 ##
@@ -190,7 +190,7 @@ export HOMEBREW_BOTTLE_DOMAIN='https://mirrors.ustc.edu.cn/homebrew-bottles'
 # 添加当前【node_modules/.bin】目录到用户文件夹
 #
 ##
-export PATH="$PATH:$HOME/.bin:$HOME/.node_modules"
+export PATH="$PATH:$HOME/.bin:$HOME/.node_modules/.bin"
 
 ##
 #
@@ -214,3 +214,17 @@ export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/pla
 #
 ##
 alias git='/usr/local/bin/git'
+
+
+##
+#
+# ————————————————————————————————————————————————————
+# 设置【cnpm】路径
+# ————————————————————————————————————————————————————
+# 使用国内淘宝镜像
+#
+##
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/dist \
+--userconfig=$HOME/.cnpmrc"
