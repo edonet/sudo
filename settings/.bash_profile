@@ -96,7 +96,7 @@ PROMPT_COMMAND="find_git_branch; $PROMPT_COMMAND"
 #
 ##
 export TERM="xterm-color"
-export PS1="\n\[\033[33m\][\t] \[\033[32m\]\u@\h: \[\033[36m\]\w/ \[\033[35m\]\$GIT_BRANCH\[\033[32m\]\n\$ "
+export PS1="\n\[\033[33m\][\t] \[\033[32m\]\u@\h: \[\033[36m\]\w/ \[\033[35m\]\$GIT_BRANCH\[\033[00m\]\n\$ "
 
 
 ##
@@ -180,6 +180,17 @@ alias ip='ifconfig | grep inet\\b'
 #
 ##
 export HOMEBREW_BOTTLE_DOMAIN='https://mirrors.ustc.edu.cn/homebrew-bottles'
+
+
+##
+#
+# ————————————————————————————————————————————————————
+# 更新【brew cask】安装的包
+# ————————————————————————————————————————————————————
+# 查询过时的包并重新安装
+#
+##
+alias upcask="brew cask outdated | xargs brew cask reinstall"
 
 
 ##

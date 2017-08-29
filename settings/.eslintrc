@@ -190,7 +190,7 @@
         "curly": 1,
 
         // 双峰驼命名格式
-        "camelcase": 2,
+        "camelcase": 0,
 
         // 强制使用三等号
         "eqeqeq": 1,
