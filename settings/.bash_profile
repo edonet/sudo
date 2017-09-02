@@ -239,3 +239,15 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 --cache=$HOME/.npm/.cache/cnpm \
 --disturl=https://npm.taobao.org/dist \
 --userconfig=$HOME/.cnpmrc"
+
+
+
+##
+#
+# ————————————————————————————————————————————————————
+# 启动【Folx GO】
+# ————————————————————————————————————————————————————
+# 设置【Folx GO】的启动位置
+#
+##
+alias folx='/Applications/Folx\ GO.app/Contents/MacOS/Folx\ GO'
