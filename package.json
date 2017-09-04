@@ -10,7 +10,8 @@
   "bin": {
     "sass": "./bin/sass.js",
     "sln": "./bin/sln.js",
-    "slink": "./bin/slink.js"
+    "slink": "./bin/slink.js",
+    "cgoban": "./bin/cgoban.js"
   },
   "repository": "git@github.com:edonet/osc.git",
   "author": "edoner <edonet@163.com>",
