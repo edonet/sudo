@@ -1,9 +1,10 @@
 [user]
-    name = edoner
-    email = edonet@163.com
+	name = edoner
+	email = edonet@163.com
 
 [core]
     quotepath = false
+	excludesfile = /Users/lifx/.gitignore_global
 
 # [color]
 #     branch = auto
@@ -44,3 +45,11 @@
 
     # 支持中文路径
     pathnameencoding = GB2312
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/lifx/.stCommitMsg
