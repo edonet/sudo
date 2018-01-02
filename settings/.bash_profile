@@ -179,7 +179,19 @@ alias ip='ifconfig | grep inet\\b'
 # ————————————————————————————————————————————————————
 #
 ##
-export HOMEBREW_BOTTLE_DOMAIN='https://mirrors.ustc.edu.cn/homebrew-bottles'
+# export HOMEBREW_BOTTLE_DOMAIN='https://mirrors.ustc.edu.cn/homebrew-bottles'
+# export HOMEBREW_GITHUB_API_TOKEN='2ecdc085d831b8a85fec65380bafeb77124ec84b'
+
+
+##
+#
+# ————————————————————————————————————————————————————
+# 设置全局代理
+# ————————————————————————————————————————————————————
+# 使命令行请求走代理
+#
+##
+# export ALL_PROXY=socks5://127.0.0.1:1087
 
 
 ##
