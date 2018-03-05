@@ -50,7 +50,7 @@ async function start() {
         res = await thunkify(sass.render)({ file: src, outputStyle: 'compressed' });
 
         // 添加兼容前缀
-        res = await postcss(postcssOptions).process(res.css);
+        res = await postcss(postcssOptions).process(res.css, { from: src, to: dist });
 
         // 写入文件
         await thunkify(fs.writeFile)(dist, res.css);
