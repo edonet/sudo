@@ -123,7 +123,7 @@ export PS1="\n\[\033[33m\][\t] \[\033[32m\]\u@\h: \[\033[36m\]\w/ \[\033[35m\]\$
 # to the terminal when a file is closed (only relevant if waiting for a file).
 #
 ##
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+# alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 
 ##
@@ -134,7 +134,19 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 # alias for ifconfig | grep
 #
 ##
-alias ip='ifconfig | grep inet\\b'
+# alias ip='ifconfig | grep inet\\b'
+
+
+##
+#
+# ————————————————————————————————————————————————————
+# List Files
+# ————————————————————————————————————————————————————
+# alias for list files
+#
+##
+alias ll='ls -l'
+alias la='ls -al'
 
 
 ##
@@ -191,7 +203,7 @@ alias ip='ifconfig | grep inet\\b'
 # 使命令行请求走代理
 #
 ##
-# export ALL_PROXY=socks5://127.0.0.1:1087
+export ALL_PROXY=socks5://127.0.0.1:1086
 
 
 ##
